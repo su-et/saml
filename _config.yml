@@ -3,7 +3,7 @@ title: SAML Integration
 email: emerging-tech@lists.stanford.edu
 description: > # this means to ignore newlines until "baseurl:"
   SAML application integration documentation and examples.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://saml.stanford.edu" # the base hostname & protocol for your site
 twitter_username: su_emergingtech
 github_username:  su-et
