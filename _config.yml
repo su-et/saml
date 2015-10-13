@@ -1,0 +1,35 @@
+# Site settings
+title: SAML Integration
+email: emerging-tech@lists.stanford.edu
+description: > # this means to ignore newlines until "baseurl:"
+  SAML application integration documentation and examples.
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://saml.stanford.edu" # the base hostname & protocol for your site
+twitter_username: su_emergingtech
+github_username:  su-et
+paginate: 5
+paginate_path: "/page:num/"
+# Build settings
+default_image: "/assets/lagunita/images/samples/QuadArchNPalms270.jpg"
+markdown: kramdown
+spotlight: /serviceproviders/shibboleth
+collections:
+  applications:
+    output: true
+    permalink: /applications/:path/
+    foo: Applications
+  serviceproviders:
+    output: true
+    permalink: /serviceproviders/:path/
+    foo: Providers
+  glossary:
+    output: true
+    permalink: /glossary/:path/
+    foo: Glossary
+
+terms:
+  saml: "[SAML]({{ site.glossary.saml.url }})"
+  idp: "[IdP]({{ site.glossary.idp.url }})"
+  sp:  "[SP]({{ site.glossary.sp.url }})"
+  assertion: "[assertion]({{ site.glossary.assertion.url }})"
+  attribute: "[attribute]({{ site.glossary.attribute.url }})"

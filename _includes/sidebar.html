@@ -1,0 +1,20 @@
+  <div id="sidebar-second" class="col-md-3 col-md-pull-9">
+    <div class="well">
+      <h2>About {{site.title}}</h2>
+      {% for p in site.pages %}
+        {% if p.permalink == '/about/' %}
+          {{ p.content }}
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% assign app = site.applications | sort: 'spotlight' | first %}
+    {% if app %}
+    <div class="well">
+      <h2>In the Spotlight:</h2>
+      <h2>{{ app.title }}</h2>
+      <img src="{% if app.image %}{{ app.image }}{% else %}{{ site.default_image }}{% endif %}" alt="" />
+      <p>{{ app.excerpt }}</p>
+      <p><a class="more-link" href="{{ app.url }}"><i class="fa fa-chevron-circle-right"></i> <span>more...</span></a></p>
+    </div>
+    {% endif %}
+  </div>

@@ -1,0 +1,11 @@
+  {% assign sortedpages = site.pages | sort: 'title' %}
+  <dl>
+    {% for p in sortedpages %}
+      {% if p.category == category %}
+        <dt><a href="{{ p.url }}">{{ p.title }}</a></dt>
+        <dd>{{ p.excerpt }}</dd>
+      {% endif %}
+    {% endfor %}
+  </dl>
+
+

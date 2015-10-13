@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+    {% include head.html %}
+
+<!-- Stanford Cardinal Templates Version 1.0 -->
+<!-- Template Property Options:                       
+     body_class: "home", "nav-1", "nav-2", etc. - specifies which item in the top nav to underline
+                 "two-line-signature" - displays two line header signature
+     h1        : "hide" - creates a hidden <h1> element
+ -->
+
+    <body class="home">
+      <div id="su-wrap"> <!-- used to force footer to bottom of short pages -->
+        <div id="su-content"> <!-- used to force footer to bottom of short pages --> 
+    
+          <!--=== Top ===-->
+          <div id="top">
+            <div class="container"> 
+              <!--=== Skip links ===-->
+              <div id="skip"> <a href="#content" onClick="$('#content').focus()">Skip to content</a> </div>
+              <!-- /Skip links --> 
+            </div>
+          </div>
+          <!--/top--> 
+    
+          {% include header.html %}
+
+    
+          <!-- Content -->
+          <div id="content" class="container" role="main" tabindex="0">
+            {{ content }}
+          </div>
+          <!-- #content--> 
+    
+        </div>
+        <!-- #su-content --> 
+      </div>
+      <!-- #su-wrap --> 
+
+    {% include footer.html %}
+  </body>
+</html>

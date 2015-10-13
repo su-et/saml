@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+    <!-- main content -->
+    <div id="content" class="container" role="main" tabindex="0">
+      <h1 class="hide">{{ site.title }}</h1>
+      <div class="row">
+        <!-- Main column -->
+        <div id="main-content" class="col-md-9 col-md-push-3" role="main">
+<!--
+          <div id="feature-banner" class="margin-bottom-30"> <img class="img-responsive" alt="" src="http://www.stanford.edu/assets/su-images/feature/ht_quad6am.jpg" />
+            <div class="feature-caption">
+              <h3>{{ site.title }}</h3>
+              <p>{{ site.slogan }}</p>
+            </div>
+          </div>
+-->
+          <h2 class="headline">Recent Updates</h2>
+          {% for post in paginator.posts %}
+          <div class="postcard-left">
+            <div class="postcard-image"><img src="{% if post.image %}{{ post.image }}{% else %}{{ site.default_image }}{% endif %}" alt="" /></div>
+            <div class="postcard-text">
+              <h3><a href="{{ page.url }}">{{ post.title }}</a></h3>
+              <p class="descriptor">{{ post.date }}</p>
+              <p>{{ post.excerpt }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% include sidebar.html %}
+      </div>
+    </div>
+    <!-- #content-->

@@ -1,0 +1,22 @@
+<div  role="navigation">
+  <div id="primary-nav">
+    <ul class="nav navbar-nav" aria-label="primary navigation">
+      <li id="nav-home"> <a href="./">Home</a></li>
+      <li id="nav-1"> <a href="/about">About</a> </li>
+      <li id="nav-2"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          {% for doc in site.applications | sort: 'title' %}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a><li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li id="nav-3"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Service Providers <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          {% for doc in site.serviceproviders | sort: 'title' %}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a><li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
