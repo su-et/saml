@@ -1,8 +1,8 @@
 <div  role="navigation">
   <div id="primary-nav">
     <ul class="nav navbar-nav" aria-label="primary navigation">
-      <li id="nav-home"> <a href="./">Home</a></li>
-      <li id="nav-1"> <a href="/about">About</a> </li>
+      <li id="nav-home"> <a href="{{ site.baseurl }}">Home</a></li>
+      <li id="nav-1"> <a href="{{ "about" | prepend: site.baseurl }}">About</a> </li>
       <li id="nav-2"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications <b class="caret"></b></a>
         <ul class="dropdown-menu">
           {% for doc in site.applications | sort: 'title' %}
