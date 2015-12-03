@@ -17,6 +17,13 @@
           {% endfor %}
         </ul>
       </li>
+      <li id="nav-4"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Attributes <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          {% for doc in site.attributes | sort: 'title' %}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a><li>
+          {% endfor %}
+        </ul>
+      </li>
     </ul>
   </div>
 </div>
