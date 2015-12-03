@@ -18,6 +18,10 @@ collections:
     output: true
     permalink: /applications/:path/
     foo: Applications
+  attributes:
+    output: true
+    permalink: /attributes/:path/
+    foo: Attributes
   serviceproviders:
     output: true
     permalink: /serviceproviders/:path/
@@ -33,3 +37,5 @@ terms:
   sp:  "[SP]({{ site.glossary.sp.url }})"
   assertion: "[assertion]({{ site.glossary.assertion.url }})"
   attribute: "[attribute]({{ site.glossary.attribute.url }})"
+  eppn: "[eduPersonPrincipalName]({{ site.attributes.edupersonprincipalname.url }})"
+  mail: "[mail]({{ site.attributes.mail.url }})"
